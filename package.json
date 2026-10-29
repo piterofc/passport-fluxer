@@ -1,0 +1,39 @@
+{
+  "name": "passport-fluxer",
+  "version": "0.1.0",
+  "description": "Passport strategy for authenticating with Fluxer using OAuth2 (authorization code + PKCE), built on passport-custom.",
+  "keywords": ["passport", "passport-strategy", "fluxer", "oauth2", "authentication", "login"],
+  "license": "MIT",
+  "author": "piterofc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piterofc/passport-fluxer.git"
+  },
+  "homepage": "https://github.com/piterofc/passport-fluxer#readme",
+  "bugs": { "url": "https://github.com/piterofc/passport-fluxer/issues" },
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["src", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test test/strategy.test.js"
+  },
+  "dependencies": {
+    "passport-custom": "^1.2.1"
+  },
+  "peerDependencies": {
+    "passport": ">=0.6.0"
+  },
+  "devDependencies": {
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "passport": "^0.7.0"
+  }
+}
